@@ -16,7 +16,8 @@ def main():
 
         # EXECUTES FAN CLEANING COMMAND
         result = sensor_sps30.start_fan_cleaning()
-        time.sleep(1)
+        # 11s GIVES THE SENSOR ENOUGH TIME TO RUN CLEAING PROCESS
+        time.sleep(11)
 
         # TURNING OFF MEASUREMENT MODE. RETURNING TO IDLE MODE.
         sensor_sps30.stop_measurement()
